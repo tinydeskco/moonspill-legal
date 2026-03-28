@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       background: #020A1D;
       color: #C8BEB0;
@@ -16,14 +15,11 @@
       line-height: 1.75;
       min-height: 100vh;
     }
-
     .page {
       max-width: 680px;
       margin: 0 auto;
       padding: 60px 28px 80px;
     }
-
-    /* ── Navigation ── */
     .nav {
       display: flex;
       gap: 24px;
@@ -40,12 +36,11 @@
       color: rgba(200, 190, 176, 0.4);
       text-decoration: none;
       transition: color 0.3s;
+      cursor: pointer;
     }
     .nav a:hover, .nav a.active {
       color: rgba(196, 146, 42, 0.8);
     }
-
-    /* ── Header ── */
     .header {
       text-align: center;
       margin-bottom: 48px;
@@ -70,8 +65,6 @@
       color: rgba(200, 190, 176, 0.3);
       margin-top: 16px;
     }
-
-    /* ── Sections ── */
     .section {
       margin-bottom: 36px;
     }
@@ -97,15 +90,6 @@
     .section li {
       margin-bottom: 6px;
     }
-
-    /* ── Divider ── */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(58, 96, 128, 0.15), transparent);
-      margin: 48px 0;
-    }
-
-    /* ── Footer ── */
     .footer {
       text-align: center;
       padding-top: 32px;
@@ -117,13 +101,6 @@
       color: rgba(196, 146, 42, 0.5);
       text-decoration: none;
     }
-
-    /* ── Section targets for nav ── */
-    section:target h2 {
-      color: rgba(196, 146, 42, 0.8);
-    }
-
-    /* ── Hide/show pages ── */
     .page-content { display: none; }
     .page-content.active { display: block; }
   </style>
@@ -131,15 +108,12 @@
 <body>
   <div class="page">
 
-    <!-- Nav -->
     <div class="nav">
-      <a href="#" id="nav-privacy" class="active" onclick="showPage('privacy')">Privacy Policy</a>
-      <a href="#" id="nav-terms" onclick="showPage('terms')">Terms of Service</a>
+      <a id="nav-privacy" class="active" onclick="showPage('privacy')">Privacy Policy</a>
+      <a id="nav-terms" onclick="showPage('terms')">Terms of Service</a>
     </div>
 
-    <!-- ═══════════════════════════════════════ -->
-    <!-- PRIVACY POLICY                         -->
-    <!-- ═══════════════════════════════════════ -->
+    <!-- PRIVACY POLICY -->
     <div id="privacy" class="page-content active">
       <div class="header">
         <h1>Privacy Policy</h1>
@@ -155,7 +129,7 @@
 
       <div class="section">
         <h2>Data Stored on Your Device</h2>
-        <p>Moonspill stores the following information locally on your device using standard on-device storage. This data never leaves your phone unless you explicitly choose to share it (e.g., sharing a sigil image or a reading with a friend).</p>
+        <p>Moonspill stores the following information locally on your device using standard on-device storage. This data never leaves your phone unless you explicitly choose to share it.</p>
         <ul>
           <li>Display name and zodiac sign (entered during onboarding)</li>
           <li>Saved readings and card pull history (Grimoire)</li>
@@ -168,11 +142,11 @@
 
       <div class="section">
         <h2>Account Creation & Social Features</h2>
-        <p>Moonspill may offer optional account creation and social features in the future, such as adding friends and sharing readings. If introduced:</p>
+        <p>Moonspill may offer optional account creation and social features in the future. If introduced:</p>
         <ul>
-          <li>Account creation will be optional — the app will remain fully functional without an account.</li>
-          <li>We will collect only the minimum information necessary (e.g., display name, email for authentication).</li>
-          <li>Shared readings and content will only be visible to users you explicitly choose to share with.</li>
+          <li>Account creation will be optional.</li>
+          <li>We will collect only the minimum information necessary.</li>
+          <li>Shared content will only be visible to users you explicitly choose to share with.</li>
           <li>You will be able to delete your account and all associated data at any time.</li>
         </ul>
         <p>This policy will be updated with specific details before any social features are launched.</p>
@@ -180,20 +154,20 @@
 
       <div class="section">
         <h2>Subscription & Payment Data</h2>
-        <p>Moonspill offers optional paid subscriptions (Full Moon and Blood Moon tiers) processed entirely through Apple's App Store. We use RevenueCat to manage subscription status.</p>
+        <p>Moonspill offers optional paid subscriptions processed entirely through Apple's App Store. We use RevenueCat to manage subscription status.</p>
         <ul>
-          <li>We do not collect, store, or have access to your payment information, credit card details, or Apple ID.</li>
-          <li>RevenueCat receives an anonymous identifier to track your subscription status. No personal information is shared with RevenueCat.</li>
-          <li>Subscription management (cancellation, renewal, billing) is handled through your Apple ID settings.</li>
+          <li>We do not collect, store, or have access to your payment information or Apple ID.</li>
+          <li>RevenueCat receives an anonymous identifier to track your subscription status.</li>
+          <li>Subscription management is handled through your Apple ID settings.</li>
         </ul>
         <p>For RevenueCat's privacy practices, see: <a href="https://www.revenuecat.com/privacy" style="color: rgba(196, 146, 42, 0.6);">revenuecat.com/privacy</a></p>
       </div>
 
       <div class="section">
         <h2>Data We Do Not Collect</h2>
-        <p>To be clear, Moonspill does not:</p>
+        <p>Moonspill does not:</p>
         <ul>
-          <li>Collect personal information beyond what you voluntarily enter in the app</li>
+          <li>Collect personal information beyond what you voluntarily enter</li>
           <li>Use analytics or tracking services</li>
           <li>Display advertisements</li>
           <li>Share or sell any user data to third parties</li>
@@ -215,35 +189,31 @@
 
       <div class="section">
         <h2>Changes to This Policy</h2>
-        <p>If we make material changes to this policy, we will update the effective date above. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        <p>If we make material changes to this policy, we will update the effective date above. Continued use of the app after changes constitutes acceptance.</p>
       </div>
 
       <div class="section">
         <h2>Contact</h2>
-        <p>Questions about this privacy policy? Reach us at:</p>
-        <p><a href="/cdn-cgi/l/email-protection#c5ada0a9a9aa85b1acabbca1a0b6aea6aaeba6aaa8" style="color: rgba(196, 146, 42, 0.6);"><span class="__cf_email__" data-cfemail="98f0fdf4f4f7d8ecf1f6e1fcfdebf3fbf7b6fbf7f5">[email&#160;protected]</span></a></p>
+        <p>Questions about this privacy policy? Reach us through the contact form at <a href="https://tinydeskco.vercel.app" style="color: rgba(196, 146, 42, 0.6);">tinydeskco.vercel.app</a></p>
       </div>
     </div>
 
-    <!-- ═══════════════════════════════════════ -->
-    <!-- TERMS OF SERVICE                       -->
-    <!-- ═══════════════════════════════════════ -->
+    <!-- TERMS OF SERVICE -->
     <div id="terms" class="page-content">
       <div class="header">
         <h1>Terms of Service</h1>
-        <div class="subtitle">Moonspill by Tinydeskco Inc.</div>
-        <div class="effective">Effective: March 23, 2026</div>
+        <div class="subtitle">Tinydeskco Inc.</div>
+        <div class="effective">Effective: March 27, 2026</div>
       </div>
 
       <div class="section">
         <h2>Acceptance of Terms</h2>
-        <p>By downloading, installing, or using Moonspill, you agree to these Terms of Service. If you do not agree, please do not use the app.</p>
+        <p>By downloading, installing, or using any Tinydeskco app including Moonspill and Doomscroll, you agree to these Terms of Service. If you do not agree, please do not use our apps.</p>
       </div>
 
       <div class="section">
         <h2>Description of Service</h2>
-        <p>Moonspill is a divination and spiritual reflection app offering tarot readings, oracle card pulls, sigil creation, and related features. Moonspill is intended for entertainment and personal reflection purposes only.</p>
-        <p>Card readings, moon phase guidance, and other content within Moonspill should not be considered professional advice of any kind — including but not limited to medical, financial, legal, or psychological advice.</p>
+        <p>Tinydeskco creates mobile applications for entertainment and personal reflection. Moonspill is a divination app offering tarot readings, oracle card pulls, sigil creation, and related features. Content within our apps should not be considered professional advice of any kind, including medical, financial, legal, or psychological advice.</p>
       </div>
 
       <div class="section">
@@ -253,40 +223,43 @@
           <li><strong>Full Moon</strong> — $3.99/month or $29.99/year</li>
           <li><strong>Blood Moon</strong> — $6.99/month or $49.99/year</li>
         </ul>
-        <p>Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
-        <p>You can manage and cancel subscriptions in your Apple ID account settings. No refunds are provided for partial subscription periods.</p>
+        <p>Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period. You can manage and cancel subscriptions in your Apple ID account settings. No refunds are provided for partial subscription periods.</p>
+      </div>
+
+      <div class="section">
+        <h2>AI-Generated Content</h2>
+        <p>Some features include AI-powered content such as personalized card interpretations. This content is for entertainment purposes only and is not a substitute for professional advice of any kind. We make no guarantees about its accuracy or reliability.</p>
       </div>
 
       <div class="section">
         <h2>Intellectual Property</h2>
-        <p>All content within Moonspill — including but not limited to card artwork, card text, sigil designs, interface design, animations, and the Moonspill name and branding — is owned by Tinydeskco Inc. and protected by copyright.</p>
-        <p>You may share sigil images created within the app for personal, non-commercial use. The Moonspill watermark must remain on shared images.</p>
+        <p>All content within our apps, including card artwork, card text, sigil designs, interface design, animations, and branding, is owned by Tinydeskco Inc. and protected by copyright. You may share sigil images created within the app for personal, non-commercial use. The Moonspill watermark must remain on shared images.</p>
       </div>
 
       <div class="section">
         <h2>User Conduct</h2>
         <p>You agree not to:</p>
         <ul>
-          <li>Reverse engineer, decompile, or disassemble the app</li>
-          <li>Reproduce or redistribute Moonspill content without permission</li>
-          <li>Use the app for any unlawful purpose</li>
+          <li>Reverse engineer, decompile, or disassemble any app</li>
+          <li>Reproduce or redistribute content without permission</li>
+          <li>Use the apps for any unlawful purpose</li>
           <li>Attempt to circumvent subscription restrictions</li>
         </ul>
       </div>
 
       <div class="section">
         <h2>Disclaimer of Warranties</h2>
-        <p>Moonspill is provided "as is" without warranties of any kind, either express or implied. We do not guarantee that the app will be uninterrupted, error-free, or free of harmful components.</p>
+        <p>Our apps are provided "as is" without warranties of any kind, either express or implied. We do not guarantee that the apps will be uninterrupted, error-free, or free of harmful components.</p>
       </div>
 
       <div class="section">
         <h2>Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, Tinydeskco Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of Moonspill.</p>
+        <p>To the maximum extent permitted by law, Tinydeskco Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our apps.</p>
       </div>
 
       <div class="section">
         <h2>Changes to Terms</h2>
-        <p>We reserve the right to modify these terms at any time. Changes take effect upon posting. Continued use of the app after changes constitutes acceptance.</p>
+        <p>We reserve the right to modify these terms at any time. Changes take effect upon posting. Continued use of the apps after changes constitutes acceptance.</p>
       </div>
 
       <div class="section">
@@ -296,22 +269,24 @@
 
       <div class="section">
         <h2>Contact</h2>
-        <p>Questions about these terms? Reach us at:</p>
-        <p><a href="/cdn-cgi/l/email-protection#0c64696060634c7865627568697f676f63226f6361" style="color: rgba(196, 146, 42, 0.6);"><span class="__cf_email__" data-cfemail="a6cec3cacac9e6d2cfc8dfc2c3d5cdc5c988c5c9cb">[email&#160;protected]</span></a></p>
+        <p>Questions about these terms? Reach us through the contact form at <a href="https://tinydeskco.vercel.app" style="color: rgba(196, 146, 42, 0.6);">tinydeskco.vercel.app</a></p>
       </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
       <p>&copy; 2026 Tinydeskco Inc. All rights reserved.</p>
     </div>
 
   </div>
 
- <script>
+  <script>
     function showPage(page) {
-      document.querySelectorAll('.page-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.nav a').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.page-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.nav a').forEach(function(el) {
+        el.classList.remove('active');
+      });
       document.getElementById(page).classList.add('active');
       document.getElementById('nav-' + page).classList.add('active');
     }
